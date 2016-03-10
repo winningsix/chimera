@@ -34,3 +34,4 @@ unit-tests.log
 /lib/
 src/main/resources/com/intel/chimera/native/
 src/main/resources/com/intel/chimera/native/*
+dependency-reduced-pom.xml

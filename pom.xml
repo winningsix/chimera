@@ -42,6 +42,7 @@
     <commons-logging.version>1.1.3</commons-logging.version>
     <slf4j-api.version>1.7.10</slf4j-api.version>
     <javac.version>1.6</javac.version>
+    <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
   </properties>
 
   <profiles>
@@ -330,6 +331,22 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>${maven-shade-plugin.version}</version>
+        <configuration>
+          <!-- put your configurations here -->
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
